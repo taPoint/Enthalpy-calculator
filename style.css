@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    padding: 24px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a237e;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 2.2em;
+}
+
+.calculator {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 32px rgba(30, 60, 120, 0.13);
+    padding: 32px 28px 24px 28px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #283593;
+    font-size: 1.07em;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1.5px solid #b3c6e0;
+    border-radius: 6px;
+    font-size: 1.08em;
+    background: #f7faff;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #1976d2;
+    outline: none;
+    background: #e3f2fd;
+}
+
+button {
+    background: linear-gradient(90deg, #1976d2 0%, #26c6da 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font-size: 1.08em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+    transition: background 0.3s, transform 0.2s;
+    margin-bottom: 5px;
+}
+button:hover {
+    background: linear-gradient(90deg, #26c6da 0%, #1976d2 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 18px 16px;
+    background: #f8faff;
+    border-radius: 8px;
+    border: 1.5px solid #e3eafc;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.04);
+}
+
+.result h3 {
+    color: #1976d2;
+    margin-bottom: 10px;
+    font-size: 1.15em;
+}
+
+#enthalpy-value {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #00897b;
+    margin-bottom: 8px;
+}
+
+#explanation {
+    color: #37474f;
+    font-size: 1.3em;
+    margin-bottom: 6px;
+}
+
+#explain-details {
+    font-size: 1.1em;
+    color: #263238;
+    background: #e3f2fd;
+    border: 1px solid #b3c6e0;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+small {
+    color: #607d8b;
+    font-size: 0.97em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #607d8b;
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 6px;
+    }
+    .calculator {
+        padding: 12px 4px 10px 4px;
+    }
+    button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
+
+.result-value {
+    color: #1b8a3a;
+    border-bottom: 1px solid #1b8a3a;
+    font-weight: 400;
+    padding: 0 1px;
+}

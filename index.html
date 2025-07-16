@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор энтальпии</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор энтальпии</h1>
+        
+        <div class="calculator">
+            <div class="input-group">
+                <label for="temperature">Начальная температура (K):</label>
+                <input type="number" id="temperature" placeholder="Введите начальную температуру" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="pressure">Начальное давление (Па):</label>
+                <input type="number" id="pressure" placeholder="Введите начальное давление" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="substance">Вещество:</label>
+                <select id="substance">
+                <option value="water">Вода (H₂O)</option>
+                <option value="nitrogen">Азот (N₂)</option>
+                <option value="oxygen">Кислород (O₂)</option>
+                <option value="carbon_dioxide">Углекислый газ (CO₂)</option>
+                <option value="methane">Метан (CH₄)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="temperature2">Конечная температура (K):</label>
+                <input type="number" id="temperature2" placeholder="Введите конечную температуру" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="pressure2">Конечное давление (Па):</label>
+                <input type="number" id="pressure2" placeholder="Введите конечное давление" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="phase2">Конечное фазовое состояние:</label>
+                <select id="phase2">
+                <option value="auto">Автоматически</option>
+                <option value="gas">Газ</option>
+                <option value="liquid">Жидкость</option>
+                <option value="solid">Твердое тело</option>
+                </select>
+                <small style="color:#888;display:block;margin-top:4px;">
+                 *Для граничных случаев (температура около точки плавления или кипения) можно выбрать конечную фазу вручную
+                </small>
+            </div>
+            
+            <button id="calculate-btn" type="button" style="margin-bottom:10px;">Рассчитать энтальпию</button>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;">
+                <button id="explain-btn" type="button">Пояснить расчёт</button>
+                <button id="auto-fill-btn" type="button">Автоматически заполнить</button>
+                <button id="reset-btn" type="button">Сбросить</button>
+            </div>
+
+            <div class="result" id="result">
+                <h3>Результат:</h3>
+                <p id="enthalpy-value">-</p>
+                <p id="explanation"></p>
+                <div id="explain-details" style="display:none;margin-top:10px;background:#f8faff;border-radius:8px;padding:10px;border:1px solid #e0e8f0;"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 TechAid Point. Калькулятор энтальпии</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
